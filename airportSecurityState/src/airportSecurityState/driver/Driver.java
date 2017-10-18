@@ -2,6 +2,7 @@ package airportSecurityState.driver;
 
 import java.util.ArrayList;
 
+import airportSecurityState.airportStates.AirportSecurity;
 import airportSecurityState.util.FileProcessor;
 
 public class Driver {
@@ -25,44 +26,14 @@ public class Driver {
 		}
 		
 		FileProcessor fprObj = new FileProcessor(inputfile);
+		AirportSecurity aptObj = new AirportSecurity();
 		
 		while((currLine = fprObj.readLine())!= null)
 		{
-			String strday,day, stritem,item;
-			int currday;
-			String [] arrayInfo = currLine.split(";");
-			strday = arrayInfo[0];
-			stritem = arrayInfo[3];
-			
-			String [] arrayDayValue = strday.split(":");
-			String [] arrayItemValue = stritem.split(":");
-			
-			day = arrayDayValue[1];
-			item = arrayItemValue[1];
-			System.out.println(day);
-			System.out.println(item);
+			if(!currLine.isEmpty())
+			aptObj.calculateRisk(currLine);
 			
 			
-			currday=Integer.parseInt(day);
-			
-			if(currday>0)
-			{
-				if(TotalDaysList.size() == 0)
-				{
-					//when list is empty
-					TotalDaysList.add(currday);
-				}
-				else
-				{
-					for(int temp : TotalDaysList)
-					{
-						if(temp == currday)
-						{
-							break;
-						}
-					}
-				}
-			}
 		}
 		
 	}
