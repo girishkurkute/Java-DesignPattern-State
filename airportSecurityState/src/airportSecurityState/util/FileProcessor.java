@@ -15,6 +15,7 @@ private Scanner scrObj = null;
 	 */
 	public FileProcessor(String inputFile)throws Exception
 	{
+		MyLogger.writeMessage("Inside FileProcessor constructor", MyLogger.DebugLevel.CONSTRUCTOR);
 		scrObj = new Scanner(new FileReader(inputFile));
 	}
 	

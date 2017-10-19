@@ -14,6 +14,7 @@ public class Results {
 	 */
 	public Results(String outputfile) {
 		// TODO Auto-generated constructor stub
+		MyLogger.writeMessage("Inside parameterized Results constructor", MyLogger.DebugLevel.CONSTRUCTOR);
 		this.outputFileName=outputfile;
 		
 	}
