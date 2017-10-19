@@ -8,10 +8,7 @@ public class Results {
 	private String outputFileName;
 	//public ArrayList<String> operationIDValues = new ArrayList<String>();
 	
-	/**
-	 * constructor to initialize the output file name
-	 * @param outputfile a name of output file
-	 */
+	
 	public Results(String outputfile) {
 		// TODO Auto-generated constructor stub
 		MyLogger.writeMessage("Inside parameterized Results constructor", MyLogger.DebugLevel.CONSTRUCTOR);
@@ -19,12 +16,7 @@ public class Results {
 		
 	}
 	
-	/**
-	 * writeToFile method used to write a result into output file
-	 * @param arrList a datastructure which stores all the tress values
-	 * @throws FileNotFoundException
-	 * @returns nothing
-	 */
+	
 	public void writeToFile(ArrayList<String> arrList) throws IOException {
 		// TODO Auto-generated method stub
 		FileWriter FWrt = null;
@@ -39,6 +31,7 @@ public class Results {
 		
 		for(String currentLine : arrList)
 		{
+			MyLogger.writeMessage("Results from data structure added into Output file", MyLogger.DebugLevel.IN_RESULTS);
 			FWrt.write(currentLine);
 			FWrt.write("\r\n");
 		}

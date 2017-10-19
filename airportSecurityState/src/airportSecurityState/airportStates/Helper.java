@@ -4,8 +4,8 @@ public class Helper {
 
 	public int noTraveller=0,noDays=0,noProhibitedItems=0;
 	public int preDay=0;
-	public float avgTrafficPerDay = 0;
-	public float avgProhibItemPerDay = 0;
+	public int avgTrafficPerDay = 0;
+	public int avgProhibItemPerDay = 0;
 	String level;
 	public String getSecurityLevel(String temp ,Helper hlObj) {
 		// TODO Auto-generated method stub
@@ -43,30 +43,32 @@ public class Helper {
 				{
 					noProhibitedItems++;
 				}
-				//System.out.println(currday + ":" + item);
-				//System.out.println(noTraveller + ":" +noDays + ":" +noProhibitedItems);
+				System.out.println(currday + ":" + item);
+				System.out.println("noTraveller-"+noTraveller + ":" +"noDays-"+noDays + ":" +"noProhibitedItems-"+noProhibitedItems);
 				
 			}
 					
 		}
 
-		avgTrafficPerDay = (float)noTraveller / noDays;
-		avgProhibItemPerDay = (float)noProhibitedItems / noDays;
-		//System.out.println("AvgtrafficItem :" + avgTrafficPerDay);
-		//System.out.println("prohibitedItem :" + avgProhibItemPerDay);
-		if((avgTrafficPerDay >= 0 && avgTrafficPerDay < 4) || (avgProhibItemPerDay >= 0 && avgProhibItemPerDay <1))
+		avgTrafficPerDay = noTraveller / noDays;
+		avgProhibItemPerDay = noProhibitedItems / noDays;
+		System.out.println("AvgtrafficItem :" + avgTrafficPerDay +" prohibitedItem :" + avgProhibItemPerDay);
+		
+		if((avgTrafficPerDay >= 8 ) || (avgProhibItemPerDay >= 2))
 		{
-			level = "Low";
+			level = "High";
 		}
 		else if((avgTrafficPerDay >= 4 && avgTrafficPerDay < 8) || (avgProhibItemPerDay >= 1 && avgProhibItemPerDay <2))
 		{
 			level = "Moderate";
 		}
-		else if((avgTrafficPerDay >= 8 ) || (avgProhibItemPerDay >= 2))
+		else if((avgTrafficPerDay >= 0 && avgTrafficPerDay < 4) || (avgProhibItemPerDay >= 0 && avgProhibItemPerDay <1))
 		{
-			level = "High";
+			level = "Low";
 		}
-		//System.out.println(level);
+		
+		
+		System.out.println(level);
 		return level;
 	}
 

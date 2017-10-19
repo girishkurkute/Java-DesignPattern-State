@@ -4,8 +4,8 @@ public class MyLogger {
 
 	 /*DEBUG_VALUE=4 [Print to stdout everytime a constructor is called]
     DEBUG_VALUE=3 [Print to stdout everytime the state is changed]
-    DEBUG_VALUE=2 [FIXME: add your own scheme here]
-    DEBUG_VALUE=1 [FIXME: add your own scheme here]
+    DEBUG_VALUE=2 [Print to stdout when result from data structure is written into output file]
+    DEBUG_VALUE=1 [Print to stdout when result is added into data structure]
     DEBUG_VALUE=0 [No output should be printed from the applicatio to stdout. It is ok to write to the output file though" ]
   */
 

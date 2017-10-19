@@ -24,7 +24,7 @@ public class Driver {
 		}
 		else
 		{
-			////Assigning text file names
+			//Assigning text file names
 			inputfile = args[0];
 			outputfile = args[1];
 			debug_Value = Integer.parseInt(args[2]);

@@ -8,22 +8,14 @@ public class FileProcessor {
 
 private Scanner scrObj = null;
 	
-	/**
-	 * constructor to initialize inputfile value
-	 * @param inputfile a name of input file to be read
-	 * @throws Exception
-	 */
+	
 	public FileProcessor(String inputFile)throws Exception
 	{
 		MyLogger.writeMessage("Inside FileProcessor constructor", MyLogger.DebugLevel.CONSTRUCTOR);
 		scrObj = new Scanner(new FileReader(inputFile));
 	}
 	
-	/**
-	 * readLine method used to read a text file line by line
-	 * @return string a line in a text file
-	 * @throws FileNotFoundException
-	 */
+	
 	public String readLine() throws FileNotFoundException
 	{
 		String currLine=null;

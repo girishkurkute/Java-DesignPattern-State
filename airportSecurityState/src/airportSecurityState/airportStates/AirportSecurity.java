@@ -41,18 +41,26 @@ public class AirportSecurity {
 		level = state.tightenOrLoosenSecurity(currString,hlObj);
 		if(level == "Low")
 		{
+			MyLogger.writeMessage("State changed to Low Risk", MyLogger.DebugLevel.IN_RUN);
 			state = lowSecurity;
 			OperationIDValues.add("1 3 5 7 9");
+			MyLogger.writeMessage("Result is added into data structure", MyLogger.DebugLevel.FROM_RESULTS);
+			
 		}
 		else if (level == "Moderate")
 		{
+			MyLogger.writeMessage("State changed to Moderate Risk", MyLogger.DebugLevel.IN_RUN);
 			state = moderateSecurity;
 			OperationIDValues.add("2 3 5 8 9");
+			MyLogger.writeMessage("Result is added into data structure", MyLogger.DebugLevel.FROM_RESULTS);
+			
 		}
 		else if (level == "High")
 		{
+			MyLogger.writeMessage("State changed to High Risk", MyLogger.DebugLevel.IN_RUN);
 			state = highSecurity;
 			OperationIDValues.add("2 4 6 8 10");
+			MyLogger.writeMessage("Result is added into data structure", MyLogger.DebugLevel.FROM_RESULTS);
 		}
 	}
 
