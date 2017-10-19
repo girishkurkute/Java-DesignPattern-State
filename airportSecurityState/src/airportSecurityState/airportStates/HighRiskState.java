@@ -4,8 +4,8 @@ import airportSecurityState.util.MyLogger;
 
 public class HighRiskState implements AirportStateI {
 	
-AirportSecurity airportSecurity;
-String level;
+	private AirportSecurity airportSecurity;
+	private String level;
 	
 	public HighRiskState(AirportSecurity airportSecurity)
 	{

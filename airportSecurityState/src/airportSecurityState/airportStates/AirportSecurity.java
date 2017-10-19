@@ -8,15 +8,15 @@ import airportSecurityState.util.Results;
 
 public class AirportSecurity {
 
-	AirportStateI lowSecurity;
-	AirportStateI moderateSecurity;
-	AirportStateI highSecurity;
+	private AirportStateI lowSecurity;
+	private AirportStateI moderateSecurity;
+	private AirportStateI highSecurity;
 	
 	public ArrayList<String> OperationIDValues = new ArrayList<String>();
 	
-	AirportStateI state;
-	String level;
-	Helper hlObj = new Helper();
+	private AirportStateI state;
+	private String level;
+	private Helper hlObj = new Helper();
 	public AirportSecurity()
 	{
 		MyLogger.writeMessage("Inside parameterized AirportSecurity constructor", MyLogger.DebugLevel.CONSTRUCTOR);

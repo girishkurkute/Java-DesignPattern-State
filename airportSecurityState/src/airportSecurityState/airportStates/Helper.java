@@ -2,11 +2,11 @@ package airportSecurityState.airportStates;
 
 public class Helper {
 
-	public int noTraveller=0,noDays=0,noProhibitedItems=0;
-	public int preDay=0;
-	public int avgTrafficPerDay = 0;
-	public int avgProhibItemPerDay = 0;
-	String level;
+	private int noTraveller=0,noDays=0,noProhibitedItems=0;
+	private int preDay=0;
+	private int avgTrafficPerDay = 0;
+	private int avgProhibItemPerDay = 0;
+	private String level;
 	public String getSecurityLevel(String temp ,Helper hlObj) {
 		// TODO Auto-generated method stub
 		
@@ -43,8 +43,8 @@ public class Helper {
 				{
 					noProhibitedItems++;
 				}
-				System.out.println(currday + ":" + item);
-				System.out.println("noTraveller-"+noTraveller + ":" +"noDays-"+noDays + ":" +"noProhibitedItems-"+noProhibitedItems);
+				//System.out.println(currday + ":" + item);
+				//System.out.println("noTraveller-"+noTraveller + ":" +"noDays-"+noDays + ":" +"noProhibitedItems-"+noProhibitedItems);
 				
 			}
 					
@@ -52,7 +52,7 @@ public class Helper {
 
 		avgTrafficPerDay = noTraveller / noDays;
 		avgProhibItemPerDay = noProhibitedItems / noDays;
-		System.out.println("AvgtrafficItem :" + avgTrafficPerDay +" prohibitedItem :" + avgProhibItemPerDay);
+		//System.out.println("AvgtrafficItem :" + avgTrafficPerDay +" prohibitedItem :" + avgProhibItemPerDay);
 		
 		if((avgTrafficPerDay >= 8 ) || (avgProhibItemPerDay >= 2))
 		{
@@ -68,7 +68,7 @@ public class Helper {
 		}
 		
 		
-		System.out.println(level);
+		//System.out.println(level);
 		return level;
 	}
 
