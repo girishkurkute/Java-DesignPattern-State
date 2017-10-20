@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-public class Results {
+public class Results implements FileDisplayInterface {
 
 	private String outputFileName;
 	//public ArrayList<String> operationIDValues = new ArrayList<String>();
